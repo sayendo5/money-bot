@@ -10,7 +10,7 @@ from aiogram.types import Update
 import bot as bot_module
 
 WEBHOOK_PATH = "/webhook"
-WEBHOOK_URL = (os.getenv("RENDER_EXTERNAL_URL") or "").rstrip("/") + WEBHOOK_PATH
+WEBHOOK_URL = (os.getenv("WEBHOOK_BASE_URL") or os.getenv("KOYEB_PUBLIC_DOMAIN") or os.getenv("RENDER_EXTERNAL_URL") or "").rstrip("/") + WEBHOOK_PATH
 
 telegram_bot = None
 dispatcher = None
